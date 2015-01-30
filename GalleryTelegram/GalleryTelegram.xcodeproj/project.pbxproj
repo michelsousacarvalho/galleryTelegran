@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C87DF531A7A47E20058632A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C87DF521A7A47E20058632A /* main.m */; };
+		6C87DF561A7A47E20058632A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C87DF551A7A47E20058632A /* AppDelegate.m */; };
+		6C87DF591A7A47E20058632A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C87DF581A7A47E20058632A /* ViewController.m */; };
+		6C87DF5C1A7A47E20058632A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C87DF5A1A7A47E20058632A /* Main.storyboard */; };
+		6C87DF5E1A7A47E20058632A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C87DF5D1A7A47E20058632A /* Images.xcassets */; };
+		6C87DF611A7A47E20058632A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C87DF5F1A7A47E20058632A /* LaunchScreen.xib */; };
+		6C87DF6D1A7A47E20058632A /* GalleryTelegramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C87DF6C1A7A47E20058632A /* GalleryTelegramTests.m */; };
+		6CC77AA81A7A4E6500C54F74 /* TGPhotoGridController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6CC77AA41A7A4E6500C54F74 /* TGPhotoGridController.mm */; };
+		6CC77AA91A7A4E6500C54F74 /* TGPhotoGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC77AA61A7A4E6500C54F74 /* TGPhotoGridCell.m */; };
+		6CC77AAA1A7A4E6500C54F74 /* TGNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC77AA71A7A4E6500C54F74 /* TGNavigationController.xib */; };
+		6CC77AAE1A7A515F00C54F74 /* TGMidia.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC77AAD1A7A515F00C54F74 /* TGMidia.m */; };
+		6CC77AEB1A7A5A5000C54F74 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC77AEA1A7A5A5000C54F74 /* libstdc++.dylib */; };
+		6CC77AED1A7A5A7D00C54F74 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC77AEC1A7A5A7D00C54F74 /* libz.dylib */; };
+		6CC77AEF1A7A5BEE00C54F74 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC77AEE1A7A5BEE00C54F74 /* SystemConfiguration.framework */; };
+		6CC77AF11A7A5C1E00C54F74 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC77AF01A7A5C1E00C54F74 /* MobileCoreServices.framework */; };
+		6CC77AF31A7A5C3F00C54F74 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC77AF21A7A5C3F00C54F74 /* AssetsLibrary.framework */; };
+		6CC77AF51A7A5C5A00C54F74 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC77AF41A7A5C5A00C54F74 /* CoreTelephony.framework */; };
+		6CC7800A1A7ABFDE00C54F74 /* TGViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780091A7ABFDE00C54F74 /* TGViewController.mm */; };
+		6CC7800D1A7ABFF700C54F74 /* TGToolbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7800C1A7ABFF700C54F74 /* TGToolbarButton.m */; };
+		6CC780101A7AC30C00C54F74 /* TGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7800F1A7AC30C00C54F74 /* TGNavigationController.m */; };
+		6CC780131A7AC44A00C54F74 /* TGGestureNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780121A7AC44A00C54F74 /* TGGestureNavigationController.m */; };
+		6CC780161A7AC46800C54F74 /* TGNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780151A7AC46800C54F74 /* TGNavigationBar.m */; };
+		6CC780191A7AC49300C54F74 /* UIViewController+TG.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780181A7AC49300C54F74 /* UIViewController+TG.m */; };
+		6CC7801C1A7AC4B900C54F74 /* TGHacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7801B1A7AC4B900C54F74 /* TGHacks.m */; };
+		6CC7801F1A7AC4E300C54F74 /* TGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7801E1A7AC4E300C54F74 /* TGLabel.m */; };
+		6CC780221A7AC51100C54F74 /* TGReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780211A7AC51100C54F74 /* TGReusableView.m */; };
+		6CC780261A7AC55A00C54F74 /* TGCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780251A7AC55A00C54F74 /* TGCommon.m */; };
+		6CC780291A7AC5C000C54F74 /* NSData+GZip.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780281A7AC5C000C54F74 /* NSData+GZip.m */; };
+		6CC7802C1A7AC98600C54F74 /* TGRemoteImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7802B1A7AC98600C54F74 /* TGRemoteImageView.m */; };
+		6CC7802F1A7ACA6400C54F74 /* TGActionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7802E1A7ACA6400C54F74 /* TGActionTableView.m */; };
+		6CC780401A7AD70700C54F74 /* NWImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7803B1A7AD70700C54F74 /* NWImageCache.m */; };
+		6CC780411A7AD70700C54F74 /* NWImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7803D1A7AD70700C54F74 /* NWImageRequest.m */; };
+		6CC780421A7AD70700C54F74 /* NWImageSaveDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7803F1A7AD70700C54F74 /* NWImageSaveDisk.m */; };
+		6CC780451A7AFA5000C54F74 /* TGImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780441A7AFA5000C54F74 /* TGImageView.m */; };
+		6CC780481A7B206200C54F74 /* TGImageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780471A7B206200C54F74 /* TGImageViewController.mm */; };
+		6CC7804B1A7B213A00C54F74 /* TGImagePanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7804A1A7B213A00C54F74 /* TGImagePanGestureRecognizer.m */; };
+		6CC7804E1A7B22AD00C54F74 /* TGImagePagingScrollView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7804D1A7B22AD00C54F74 /* TGImagePagingScrollView.mm */; };
+		6CC780511A7B232600C54F74 /* TGImageViewPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780501A7B232600C54F74 /* TGImageViewPage.m */; };
+		6CC780541A7B235D00C54F74 /* TGImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780531A7B235D00C54F74 /* TGImageScrollView.m */; };
+		6CC780571A7B23A100C54F74 /* TGDoubleTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780561A7B23A100C54F74 /* TGDoubleTapGestureRecognizer.m */; };
+		6CC7805A1A7B252F00C54F74 /* TGImageTransitionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC780591A7B252F00C54F74 /* TGImageTransitionHelper.m */; };
+		6CC7805D1A7B28D400C54F74 /* TGImageViewControllerInterfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7805C1A7B28D400C54F74 /* TGImageViewControllerInterfaceView.m */; };
+		6CC780601A7B2C7800C54F74 /* TGImageUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6CC7805F1A7B2C7800C54F74 /* TGImageUtils.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C87DF671A7A47E20058632A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C87DF451A7A47E20058632A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C87DF4C1A7A47E20058632A;
+			remoteInfo = GalleryTelegram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6C87DF4D1A7A47E20058632A /* GalleryTelegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryTelegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C87DF511A7A47E20058632A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C87DF521A7A47E20058632A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6C87DF541A7A47E20058632A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6C87DF551A7A47E20058632A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6C87DF571A7A47E20058632A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6C87DF581A7A47E20058632A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6C87DF5B1A7A47E20058632A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C87DF5D1A7A47E20058632A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6C87DF601A7A47E20058632A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6C87DF661A7A47E20058632A /* GalleryTelegramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleryTelegramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C87DF6B1A7A47E20058632A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C87DF6C1A7A47E20058632A /* GalleryTelegramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GalleryTelegramTests.m; sourceTree = "<group>"; };
+		6CC77AA31A7A4E6500C54F74 /* TGPhotoGridController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGPhotoGridController.h; sourceTree = "<group>"; };
+		6CC77AA41A7A4E6500C54F74 /* TGPhotoGridController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGPhotoGridController.mm; sourceTree = "<group>"; };
+		6CC77AA51A7A4E6500C54F74 /* TGPhotoGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGPhotoGridCell.h; sourceTree = "<group>"; };
+		6CC77AA61A7A4E6500C54F74 /* TGPhotoGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGPhotoGridCell.m; sourceTree = "<group>"; };
+		6CC77AA71A7A4E6500C54F74 /* TGNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGNavigationController.xib; sourceTree = "<group>"; };
+		6CC77AAC1A7A515F00C54F74 /* TGMidia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGMidia.h; sourceTree = "<group>"; };
+		6CC77AAD1A7A515F00C54F74 /* TGMidia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGMidia.m; sourceTree = "<group>"; };
+		6CC77AEA1A7A5A5000C54F74 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		6CC77AEC1A7A5A7D00C54F74 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6CC77AEE1A7A5BEE00C54F74 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6CC77AF01A7A5C1E00C54F74 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6CC77AF21A7A5C3F00C54F74 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		6CC77AF41A7A5C5A00C54F74 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6CC77B051A7A5F8B00C54F74 /* GalleryPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GalleryPrefixHeader.pch; path = ../GalleryPrefixHeader.pch; sourceTree = "<group>"; };
+		6CC780021A7AA62A00C54F74 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		6CC780081A7ABFDE00C54F74 /* TGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGViewController.h; sourceTree = "<group>"; };
+		6CC780091A7ABFDE00C54F74 /* TGViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGViewController.mm; sourceTree = "<group>"; };
+		6CC7800B1A7ABFF700C54F74 /* TGToolbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGToolbarButton.h; sourceTree = "<group>"; };
+		6CC7800C1A7ABFF700C54F74 /* TGToolbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGToolbarButton.m; sourceTree = "<group>"; };
+		6CC7800E1A7AC30C00C54F74 /* TGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGNavigationController.h; sourceTree = "<group>"; };
+		6CC7800F1A7AC30C00C54F74 /* TGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGNavigationController.m; sourceTree = "<group>"; };
+		6CC780111A7AC44A00C54F74 /* TGGestureNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGGestureNavigationController.h; sourceTree = "<group>"; };
+		6CC780121A7AC44A00C54F74 /* TGGestureNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGGestureNavigationController.m; sourceTree = "<group>"; };
+		6CC780141A7AC46800C54F74 /* TGNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGNavigationBar.h; sourceTree = "<group>"; };
+		6CC780151A7AC46800C54F74 /* TGNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGNavigationBar.m; sourceTree = "<group>"; };
+		6CC780171A7AC49300C54F74 /* UIViewController+TG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TG.h"; sourceTree = "<group>"; };
+		6CC780181A7AC49300C54F74 /* UIViewController+TG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TG.m"; sourceTree = "<group>"; };
+		6CC7801A1A7AC4B900C54F74 /* TGHacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGHacks.h; sourceTree = "<group>"; };
+		6CC7801B1A7AC4B900C54F74 /* TGHacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGHacks.m; sourceTree = "<group>"; };
+		6CC7801D1A7AC4E300C54F74 /* TGLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGLabel.h; sourceTree = "<group>"; };
+		6CC7801E1A7AC4E300C54F74 /* TGLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGLabel.m; sourceTree = "<group>"; };
+		6CC780201A7AC51100C54F74 /* TGReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGReusableView.h; sourceTree = "<group>"; };
+		6CC780211A7AC51100C54F74 /* TGReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGReusableView.m; sourceTree = "<group>"; };
+		6CC780241A7AC55A00C54F74 /* TGCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGCommon.h; sourceTree = "<group>"; };
+		6CC780251A7AC55A00C54F74 /* TGCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGCommon.m; sourceTree = "<group>"; };
+		6CC780271A7AC5C000C54F74 /* NSData+GZip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GZip.h"; sourceTree = "<group>"; };
+		6CC780281A7AC5C000C54F74 /* NSData+GZip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+GZip.m"; sourceTree = "<group>"; };
+		6CC7802A1A7AC98600C54F74 /* TGRemoteImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRemoteImageView.h; sourceTree = "<group>"; };
+		6CC7802B1A7AC98600C54F74 /* TGRemoteImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRemoteImageView.m; sourceTree = "<group>"; };
+		6CC7802D1A7ACA6400C54F74 /* TGActionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGActionTableView.h; sourceTree = "<group>"; };
+		6CC7802E1A7ACA6400C54F74 /* TGActionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGActionTableView.m; sourceTree = "<group>"; };
+		6CC780331A7ACAD300C54F74 /* TGContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGContentViewController.h; sourceTree = "<group>"; };
+		6CC780341A7ACB2800C54F74 /* TGImageViewControllerCompanion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGImageViewControllerCompanion.h; sourceTree = "<group>"; };
+		6CC7803A1A7AD70700C54F74 /* NWImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWImageCache.h; sourceTree = "<group>"; };
+		6CC7803B1A7AD70700C54F74 /* NWImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWImageCache.m; sourceTree = "<group>"; };
+		6CC7803C1A7AD70700C54F74 /* NWImageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWImageRequest.h; sourceTree = "<group>"; };
+		6CC7803D1A7AD70700C54F74 /* NWImageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWImageRequest.m; sourceTree = "<group>"; };
+		6CC7803E1A7AD70700C54F74 /* NWImageSaveDisk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWImageSaveDisk.h; sourceTree = "<group>"; };
+		6CC7803F1A7AD70700C54F74 /* NWImageSaveDisk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWImageSaveDisk.m; sourceTree = "<group>"; };
+		6CC780431A7AFA5000C54F74 /* TGImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGImageView.h; sourceTree = "<group>"; };
+		6CC780441A7AFA5000C54F74 /* TGImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGImageView.m; sourceTree = "<group>"; };
+		6CC780461A7B206200C54F74 /* TGImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGImageViewController.h; sourceTree = "<group>"; };
+		6CC780471A7B206200C54F74 /* TGImageViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGImageViewController.mm; sourceTree = "<group>"; };
+		6CC780491A7B213A00C54F74 /* TGImagePanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGImagePanGestureRecognizer.h; sourceTree = "<group>"; };
+		6CC7804A1A7B213A00C54F74 /* TGImagePanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGImagePanGestureRecognizer.m; sourceTree = "<group>"; };
+		6CC7804C1A7B22AD00C54F74 /* TGImagePagingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGImagePagingScrollView.h; sourceTree = "<group>"; };
+		6CC7804D1A7B22AD00C54F74 /* TGImagePagingScrollView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGImagePagingScrollView.mm; sourceTree = "<group>"; };
+		6CC7804F1A7B232600C54F74 /* TGImageViewPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGImageViewPage.h; sourceTree = "<group>"; };
+		6CC780501A7B232600C54F74 /* TGImageViewPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGImageViewPage.m; sourceTree = "<group>"; };
+		6CC780521A7B235D00C54F74 /* TGImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGImageScrollView.h; sourceTree = "<group>"; };
+		6CC780531A7B235D00C54F74 /* TGImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGImageScrollView.m; sourceTree = "<group>"; };
+		6CC780551A7B23A100C54F74 /* TGDoubleTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGDoubleTapGestureRecognizer.h; sourceTree = "<group>"; };
+		6CC780561A7B23A100C54F74 /* TGDoubleTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGDoubleTapGestureRecognizer.m; sourceTree = "<group>"; };
+		6CC780581A7B252F00C54F74 /* TGImageTransitionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGImageTransitionHelper.h; sourceTree = "<group>"; };
+		6CC780591A7B252F00C54F74 /* TGImageTransitionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGImageTransitionHelper.m; sourceTree = "<group>"; };
+		6CC7805B1A7B28D400C54F74 /* TGImageViewControllerInterfaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGImageViewControllerInterfaceView.h; sourceTree = "<group>"; };
+		6CC7805C1A7B28D400C54F74 /* TGImageViewControllerInterfaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGImageViewControllerInterfaceView.m; sourceTree = "<group>"; };
+		6CC7805E1A7B2C7800C54F74 /* TGImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGImageUtils.h; sourceTree = "<group>"; };
+		6CC7805F1A7B2C7800C54F74 /* TGImageUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGImageUtils.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C87DF4A1A7A47E20058632A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC77AF51A7A5C5A00C54F74 /* CoreTelephony.framework in Frameworks */,
+				6CC77AF31A7A5C3F00C54F74 /* AssetsLibrary.framework in Frameworks */,
+				6CC77AF11A7A5C1E00C54F74 /* MobileCoreServices.framework in Frameworks */,
+				6CC77AEF1A7A5BEE00C54F74 /* SystemConfiguration.framework in Frameworks */,
+				6CC77AED1A7A5A7D00C54F74 /* libz.dylib in Frameworks */,
+				6CC77AEB1A7A5A5000C54F74 /* libstdc++.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C87DF631A7A47E20058632A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C87DF441A7A47E20058632A = {
+			isa = PBXGroup;
+			children = (
+				6CC780021A7AA62A00C54F74 /* libc++.dylib */,
+				6CC77AF41A7A5C5A00C54F74 /* CoreTelephony.framework */,
+				6CC77AF21A7A5C3F00C54F74 /* AssetsLibrary.framework */,
+				6CC77AF01A7A5C1E00C54F74 /* MobileCoreServices.framework */,
+				6CC77AEE1A7A5BEE00C54F74 /* SystemConfiguration.framework */,
+				6CC77AEC1A7A5A7D00C54F74 /* libz.dylib */,
+				6CC77AEA1A7A5A5000C54F74 /* libstdc++.dylib */,
+				6C87DF4F1A7A47E20058632A /* GalleryTelegram */,
+				6C87DF691A7A47E20058632A /* GalleryTelegramTests */,
+				6C87DF4E1A7A47E20058632A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C87DF4E1A7A47E20058632A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C87DF4D1A7A47E20058632A /* GalleryTelegram.app */,
+				6C87DF661A7A47E20058632A /* GalleryTelegramTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C87DF4F1A7A47E20058632A /* GalleryTelegram */ = {
+			isa = PBXGroup;
+			children = (
+				6CC780391A7AD66500C54F74 /* CacheImage */,
+				6CC780231A7AC55200C54F74 /* Util */,
+				6CC780071A7ABF8A00C54F74 /* Controller */,
+				6CC77AAB1A7A512E00C54F74 /* Model */,
+				6CC77AA31A7A4E6500C54F74 /* TGPhotoGridController.h */,
+				6CC77AA41A7A4E6500C54F74 /* TGPhotoGridController.mm */,
+				6CC77AA51A7A4E6500C54F74 /* TGPhotoGridCell.h */,
+				6CC77AA61A7A4E6500C54F74 /* TGPhotoGridCell.m */,
+				6CC77AA71A7A4E6500C54F74 /* TGNavigationController.xib */,
+				6C87DF541A7A47E20058632A /* AppDelegate.h */,
+				6C87DF551A7A47E20058632A /* AppDelegate.m */,
+				6C87DF571A7A47E20058632A /* ViewController.h */,
+				6C87DF581A7A47E20058632A /* ViewController.m */,
+				6C87DF5A1A7A47E20058632A /* Main.storyboard */,
+				6C87DF5D1A7A47E20058632A /* Images.xcassets */,
+				6C87DF5F1A7A47E20058632A /* LaunchScreen.xib */,
+				6C87DF501A7A47E20058632A /* Supporting Files */,
+			);
+			path = GalleryTelegram;
+			sourceTree = "<group>";
+		};
+		6C87DF501A7A47E20058632A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CC77B051A7A5F8B00C54F74 /* GalleryPrefixHeader.pch */,
+				6C87DF511A7A47E20058632A /* Info.plist */,
+				6C87DF521A7A47E20058632A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C87DF691A7A47E20058632A /* GalleryTelegramTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C87DF6C1A7A47E20058632A /* GalleryTelegramTests.m */,
+				6C87DF6A1A7A47E20058632A /* Supporting Files */,
+			);
+			path = GalleryTelegramTests;
+			sourceTree = "<group>";
+		};
+		6C87DF6A1A7A47E20058632A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C87DF6B1A7A47E20058632A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6CC77AAB1A7A512E00C54F74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6CC77AAC1A7A515F00C54F74 /* TGMidia.h */,
+				6CC77AAD1A7A515F00C54F74 /* TGMidia.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6CC780071A7ABF8A00C54F74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6CC7805B1A7B28D400C54F74 /* TGImageViewControllerInterfaceView.h */,
+				6CC7805C1A7B28D400C54F74 /* TGImageViewControllerInterfaceView.m */,
+				6CC780581A7B252F00C54F74 /* TGImageTransitionHelper.h */,
+				6CC780591A7B252F00C54F74 /* TGImageTransitionHelper.m */,
+				6CC780551A7B23A100C54F74 /* TGDoubleTapGestureRecognizer.h */,
+				6CC780561A7B23A100C54F74 /* TGDoubleTapGestureRecognizer.m */,
+				6CC780521A7B235D00C54F74 /* TGImageScrollView.h */,
+				6CC780531A7B235D00C54F74 /* TGImageScrollView.m */,
+				6CC7804F1A7B232600C54F74 /* TGImageViewPage.h */,
+				6CC780501A7B232600C54F74 /* TGImageViewPage.m */,
+				6CC7804C1A7B22AD00C54F74 /* TGImagePagingScrollView.h */,
+				6CC7804D1A7B22AD00C54F74 /* TGImagePagingScrollView.mm */,
+				6CC780491A7B213A00C54F74 /* TGImagePanGestureRecognizer.h */,
+				6CC7804A1A7B213A00C54F74 /* TGImagePanGestureRecognizer.m */,
+				6CC780461A7B206200C54F74 /* TGImageViewController.h */,
+				6CC780471A7B206200C54F74 /* TGImageViewController.mm */,
+				6CC780341A7ACB2800C54F74 /* TGImageViewControllerCompanion.h */,
+				6CC780331A7ACAD300C54F74 /* TGContentViewController.h */,
+				6CC7802D1A7ACA6400C54F74 /* TGActionTableView.h */,
+				6CC7802E1A7ACA6400C54F74 /* TGActionTableView.m */,
+				6CC7802A1A7AC98600C54F74 /* TGRemoteImageView.h */,
+				6CC7802B1A7AC98600C54F74 /* TGRemoteImageView.m */,
+				6CC780201A7AC51100C54F74 /* TGReusableView.h */,
+				6CC780211A7AC51100C54F74 /* TGReusableView.m */,
+				6CC7801D1A7AC4E300C54F74 /* TGLabel.h */,
+				6CC7801E1A7AC4E300C54F74 /* TGLabel.m */,
+				6CC7801A1A7AC4B900C54F74 /* TGHacks.h */,
+				6CC7801B1A7AC4B900C54F74 /* TGHacks.m */,
+				6CC780171A7AC49300C54F74 /* UIViewController+TG.h */,
+				6CC780181A7AC49300C54F74 /* UIViewController+TG.m */,
+				6CC780141A7AC46800C54F74 /* TGNavigationBar.h */,
+				6CC780151A7AC46800C54F74 /* TGNavigationBar.m */,
+				6CC780111A7AC44A00C54F74 /* TGGestureNavigationController.h */,
+				6CC780121A7AC44A00C54F74 /* TGGestureNavigationController.m */,
+				6CC7800E1A7AC30C00C54F74 /* TGNavigationController.h */,
+				6CC7800F1A7AC30C00C54F74 /* TGNavigationController.m */,
+				6CC780081A7ABFDE00C54F74 /* TGViewController.h */,
+				6CC780091A7ABFDE00C54F74 /* TGViewController.mm */,
+				6CC7800B1A7ABFF700C54F74 /* TGToolbarButton.h */,
+				6CC7800C1A7ABFF700C54F74 /* TGToolbarButton.m */,
+				6CC780431A7AFA5000C54F74 /* TGImageView.h */,
+				6CC780441A7AFA5000C54F74 /* TGImageView.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6CC780231A7AC55200C54F74 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6CC7805E1A7B2C7800C54F74 /* TGImageUtils.h */,
+				6CC7805F1A7B2C7800C54F74 /* TGImageUtils.mm */,
+				6CC780271A7AC5C000C54F74 /* NSData+GZip.h */,
+				6CC780281A7AC5C000C54F74 /* NSData+GZip.m */,
+				6CC780241A7AC55A00C54F74 /* TGCommon.h */,
+				6CC780251A7AC55A00C54F74 /* TGCommon.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		6CC780391A7AD66500C54F74 /* CacheImage */ = {
+			isa = PBXGroup;
+			children = (
+				6CC7803A1A7AD70700C54F74 /* NWImageCache.h */,
+				6CC7803B1A7AD70700C54F74 /* NWImageCache.m */,
+				6CC7803C1A7AD70700C54F74 /* NWImageRequest.h */,
+				6CC7803D1A7AD70700C54F74 /* NWImageRequest.m */,
+				6CC7803E1A7AD70700C54F74 /* NWImageSaveDisk.h */,
+				6CC7803F1A7AD70700C54F74 /* NWImageSaveDisk.m */,
+			);
+			name = CacheImage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C87DF4C1A7A47E20058632A /* GalleryTelegram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C87DF701A7A47E20058632A /* Build configuration list for PBXNativeTarget "GalleryTelegram" */;
+			buildPhases = (
+				6C87DF491A7A47E20058632A /* Sources */,
+				6C87DF4A1A7A47E20058632A /* Frameworks */,
+				6C87DF4B1A7A47E20058632A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GalleryTelegram;
+			productName = GalleryTelegram;
+			productReference = 6C87DF4D1A7A47E20058632A /* GalleryTelegram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C87DF651A7A47E20058632A /* GalleryTelegramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C87DF731A7A47E20058632A /* Build configuration list for PBXNativeTarget "GalleryTelegramTests" */;
+			buildPhases = (
+				6C87DF621A7A47E20058632A /* Sources */,
+				6C87DF631A7A47E20058632A /* Frameworks */,
+				6C87DF641A7A47E20058632A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C87DF681A7A47E20058632A /* PBXTargetDependency */,
+			);
+			name = GalleryTelegramTests;
+			productName = GalleryTelegramTests;
+			productReference = 6C87DF661A7A47E20058632A /* GalleryTelegramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C87DF451A7A47E20058632A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Michel de Sousa Carvalho";
+				TargetAttributes = {
+					6C87DF4C1A7A47E20058632A = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					6C87DF651A7A47E20058632A = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 6C87DF4C1A7A47E20058632A;
+					};
+				};
+			};
+			buildConfigurationList = 6C87DF481A7A47E20058632A /* Build configuration list for PBXProject "GalleryTelegram" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C87DF441A7A47E20058632A;
+			productRefGroup = 6C87DF4E1A7A47E20058632A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C87DF4C1A7A47E20058632A /* GalleryTelegram */,
+				6C87DF651A7A47E20058632A /* GalleryTelegramTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C87DF4B1A7A47E20058632A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C87DF5C1A7A47E20058632A /* Main.storyboard in Resources */,
+				6C87DF611A7A47E20058632A /* LaunchScreen.xib in Resources */,
+				6CC77AAA1A7A4E6500C54F74 /* TGNavigationController.xib in Resources */,
+				6C87DF5E1A7A47E20058632A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C87DF641A7A47E20058632A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C87DF491A7A47E20058632A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC780421A7AD70700C54F74 /* NWImageSaveDisk.m in Sources */,
+				6CC77AA91A7A4E6500C54F74 /* TGPhotoGridCell.m in Sources */,
+				6CC780221A7AC51100C54F74 /* TGReusableView.m in Sources */,
+				6CC77AAE1A7A515F00C54F74 /* TGMidia.m in Sources */,
+				6C87DF591A7A47E20058632A /* ViewController.m in Sources */,
+				6CC780481A7B206200C54F74 /* TGImageViewController.mm in Sources */,
+				6CC780601A7B2C7800C54F74 /* TGImageUtils.mm in Sources */,
+				6CC780571A7B23A100C54F74 /* TGDoubleTapGestureRecognizer.m in Sources */,
+				6CC780541A7B235D00C54F74 /* TGImageScrollView.m in Sources */,
+				6CC780101A7AC30C00C54F74 /* TGNavigationController.m in Sources */,
+				6CC7805A1A7B252F00C54F74 /* TGImageTransitionHelper.m in Sources */,
+				6C87DF561A7A47E20058632A /* AppDelegate.m in Sources */,
+				6CC7802F1A7ACA6400C54F74 /* TGActionTableView.m in Sources */,
+				6CC780451A7AFA5000C54F74 /* TGImageView.m in Sources */,
+				6CC780291A7AC5C000C54F74 /* NSData+GZip.m in Sources */,
+				6CC7801F1A7AC4E300C54F74 /* TGLabel.m in Sources */,
+				6C87DF531A7A47E20058632A /* main.m in Sources */,
+				6CC780401A7AD70700C54F74 /* NWImageCache.m in Sources */,
+				6CC7802C1A7AC98600C54F74 /* TGRemoteImageView.m in Sources */,
+				6CC780131A7AC44A00C54F74 /* TGGestureNavigationController.m in Sources */,
+				6CC780261A7AC55A00C54F74 /* TGCommon.m in Sources */,
+				6CC7800A1A7ABFDE00C54F74 /* TGViewController.mm in Sources */,
+				6CC7800D1A7ABFF700C54F74 /* TGToolbarButton.m in Sources */,
+				6CC7801C1A7AC4B900C54F74 /* TGHacks.m in Sources */,
+				6CC780161A7AC46800C54F74 /* TGNavigationBar.m in Sources */,
+				6CC77AA81A7A4E6500C54F74 /* TGPhotoGridController.mm in Sources */,
+				6CC7804E1A7B22AD00C54F74 /* TGImagePagingScrollView.mm in Sources */,
+				6CC780411A7AD70700C54F74 /* NWImageRequest.m in Sources */,
+				6CC7805D1A7B28D400C54F74 /* TGImageViewControllerInterfaceView.m in Sources */,
+				6CC7804B1A7B213A00C54F74 /* TGImagePanGestureRecognizer.m in Sources */,
+				6CC780511A7B232600C54F74 /* TGImageViewPage.m in Sources */,
+				6CC780191A7AC49300C54F74 /* UIViewController+TG.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C87DF621A7A47E20058632A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C87DF6D1A7A47E20058632A /* GalleryTelegramTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C87DF681A7A47E20058632A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C87DF4C1A7A47E20058632A /* GalleryTelegram */;
+			targetProxy = 6C87DF671A7A47E20058632A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6C87DF5A1A7A47E20058632A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C87DF5B1A7A47E20058632A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C87DF5F1A7A47E20058632A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C87DF601A7A47E20058632A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C87DF6E1A7A47E20058632A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6C87DF6F1A7A47E20058632A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C87DF711A7A47E20058632A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GalleryPrefixHeader.pch;
+				INFOPLIST_FILE = GalleryTelegram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "../TelegraphKit/TelegraphKit/** ../GPUImage/framework/Source/**";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		6C87DF721A7A47E20058632A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GalleryPrefixHeader.pch;
+				INFOPLIST_FILE = GalleryTelegram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "../TelegraphKit/TelegraphKit/** ../GPUImage/framework/Source/**";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+		6C87DF741A7A47E20058632A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GalleryTelegramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GalleryTelegram.app/GalleryTelegram";
+			};
+			name = Debug;
+		};
+		6C87DF751A7A47E20058632A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GalleryTelegramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GalleryTelegram.app/GalleryTelegram";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C87DF481A7A47E20058632A /* Build configuration list for PBXProject "GalleryTelegram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C87DF6E1A7A47E20058632A /* Debug */,
+				6C87DF6F1A7A47E20058632A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C87DF701A7A47E20058632A /* Build configuration list for PBXNativeTarget "GalleryTelegram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C87DF711A7A47E20058632A /* Debug */,
+				6C87DF721A7A47E20058632A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C87DF731A7A47E20058632A /* Build configuration list for PBXNativeTarget "GalleryTelegramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C87DF741A7A47E20058632A /* Debug */,
+				6C87DF751A7A47E20058632A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C87DF451A7A47E20058632A /* Project object */;
+}
