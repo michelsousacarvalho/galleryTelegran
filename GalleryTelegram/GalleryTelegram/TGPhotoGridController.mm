@@ -311,6 +311,7 @@
 //            gridCell.watcherHandle = _actionHandle;
         }
 //        gridCell.midia = self.midia;
+        gridCell.delegate = self;
         gridCell.numberOfImagePlaces = _imagesPerRow;
         [gridCell.imageUrls removeAllObjects];
         [gridCell.imageTags removeAllObjects];
@@ -843,199 +844,71 @@
     }
 }
 
+-(void) imageViewTapped:(TGPhotoGridCell *)cell
+{
+ 
+    UITapGestureRecognizer *recognizer = cell.recognizer;
+
+    if(recognizer.state == UIGestureRecognizerStateRecognized){
+            TGImageView *imageView  = (TGImageView *) recognizer.view;
+//        NSValue *nRect =[NSValue valueWithCGRect:[imageView convertRect:imageView.bounds toView:self.view]];
+        
+        
+            if (![imageView isKindOfClass:[TGImageView class]])
+                return;
+        UIImage *currentImage = [imageView currentImage];
+        if (currentImage == nil)
+            return;
+//        int imageIndex = [cell.imageViews indexOfObject:recognizer.view];
+        
+         UIView *hideView = nil;
+        NSNumber *nTag = [NSNumber numberWithInt:6];
+        CGRect rect = cell.imageViewTG.frame;
+        if (!CGRectIsNull(rect)){
+            hideView = [cell viewForImageWithTag:nTag];
+//            hideView =
+        }
+//
+//        break;
+
+    }
+}
+
 #pragma mark -
-
-//- (void)actionStageActionRequested:(NSString *)action options:(NSDictionary *)options
-//{
-//    if ([action isEqualToString:@"openImage"])
-//    {
-//        NSValue *nRect = [options objectForKey:@"rectInWindowCoords"];
-//        NSNumber *nTag = [options objectForKey:@"tag"];
-//        if (nTag == nil)
-//            return;
-//        
-//        UIView *hideView = nil;
-//        int messageId = [nTag intValue];
-//        for (UITableViewCell *cell in [self.tableView visibleCells])
-//        {
-//            if ([cell isKindOfClass:[TGPhotoGridCell class]])
-//            {
-//                TGPhotoGridCell *gridCell = (TGPhotoGridCell *)cell;
-//                for (NSNumber *nMessageId in gridCell.imageTags)
-//                {
-//                    if ([nMessageId intValue] == messageId)
-//                    {
-//                        CGRect rect = [gridCell rectForImageWithTag:nTag];
-//                        if (!CGRectIsNull(rect))
-//                        {
-//                            hideView = [gridCell viewForImageWithTag:nTag];
-//                        }
-//                        
-//                        break;
-//                    }
-//                }
-//            }
-//        }
-//        
-//        int mid = [nTag intValue];
-////        id<TGMediaItem> imageItem = nil;
-//        
-////        for (TGMessage *message in _presentationListModel)
-////        {
-////            if (message.mid == mid)
-////            {
-////                for (TGMediaAttachment *attachment in message.mediaAttachments)
-////                {
-////                    if (attachment.type == TGImageMediaAttachmentType)
-////                    {
-//////                        TGImageMediaAttachment *imageAttachment = (TGImageMediaAttachment *)attachment;
-////                        
-//////                        imageItem = [[TGMessageMediaItem alloc] initWithMessage:message author:[TGDatabaseInstance() loadUser:(int)message.fromUid] imageInfo:imageAttachment.imageInfo];
-////                        break;
-////                    }
-////                    else if (attachment.type == TGVideoMediaAttachmentType)
-////                    {
-//////                        TGVideoMediaAttachment *videoAttachment = (TGVideoMediaAttachment *)attachment;
-////                        
-//////                        imageItem = [[TGMessageMediaItem alloc] initWithMessage:message author:[TGDatabaseInstance() loadUser:(int)message.fromUid] videoAttachment:videoAttachment];
-////                        break;
-////                    }
-////                }
-////                
-////                break;
-////            }
-////        }
-//        
-////        UIImage *image = nil;
-////        
-////        if (imageItem != nil)
-////        {
-////            NSString *thumbnailUrl = nil;
-////            
-////            if ([imageItem imageInfo] != nil)
-////                thumbnailUrl = [[imageItem imageInfo] closestImageUrlWithSize:CGSizeZero resultingSize:NULL];
-////            else if ([imageItem videoAttachment] != nil)
-////                thumbnailUrl = [[[imageItem videoAttachment] thumbnailInfo] closestImageUrlWithSize:CGSizeZero resultingSize:NULL];
-////            
-////            if (thumbnailUrl != nil)
-////                image = [[TGRemoteImageView sharedCache] cachedImage:thumbnailUrl availability:TGCacheBoth];
-////        }
-////
-////        if (imageItem != nil && image != nil)
-////        {
-////            CGRect windowSpaceFrame = [nRect CGRectValue];
-////            TGImageViewController *imageViewController = [[TGImageViewController alloc] initWithImageItem:imageItem placeholder:image];
-////            imageViewController.saveToGallery = _conversationId > INT_MIN && TGAppDelegateInstance.autosavePhotos;
-////            imageViewController.ignoreSaveToGalleryUid = TGTelegraphInstance.clientUserId;
-////            imageViewController.groupIdForDownloadingItems = _conversationId;
-////            if ([imageItem type] == TGMediaItemTypeVideo)
-////                imageViewController.autoplay = true;
-//        
-////            TGTelegraphImageViewControllerCompanion *companion = [[TGTelegraphImageViewControllerCompanion alloc] initWithPeerId:_conversationId firstItemId:mid isEncrypted:_isEncrypted];
-////            imageViewController.imageViewCompanion = companion;
-////            companion.imageViewController = imageViewController;
-////            TGImageViewController *imageViewController = 
-////            [imageViewController animateAppear:self.view anchorForImage:self.tableView fromRect:windowSpaceFrame fromImage:image start:^
-////            {
-////                hideView.hidden = true;
-////            }];
-////            imageViewController.tags = [[NSMutableDictionary alloc] initWithObjectsAndKeys:nTag, @"tag", nil];
-////            imageViewController.watcherHandle = _actionHandle;
-//            
-////            [TGAppDelegateInstance presentContentController:imageViewController];
-//        }
-//    }
-//    else if ([action isEqualToString:@"hideImage"])
-//    {
-//        int messageId = [[options objectForKey:@"messageId"] intValue];
-//        if (messageId != 0)
-//        {
-//            for (UITableViewCell *cell in [_tableView visibleCells])
-//            {
-//                if ([cell isKindOfClass:[TGPhotoGridCell class]])
-//                {
-//                    TGPhotoGridCell *gridCell = (TGPhotoGridCell *)cell;
-//                    for (NSNumber *nMessageId in gridCell.imageTags)
-//                    {
-//                        if ([nMessageId intValue] == messageId)
-//                        {
-//                            CGRect rect = [gridCell rectForImageWithTag:[NSNumber numberWithInt:messageId]];
-//                            if (!CGRectIsNull(rect))
-//                            {
-//                                [gridCell viewForImageWithTag:[NSNumber numberWithInt:messageId]].hidden = [[options objectForKey:@"hide"] boolValue];
-//                            }
-//                            
-//                            break;
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-//    else if ([action isEqualToString:@"closeImage"])
-//    {
-//        TGImageViewController *imageViewController = [options objectForKey:@"sender"];
-//        
-//        int currentMessageId = [[imageViewController currentItemId] intValue];
-//        
-//        CGRect targetRect = CGRectZero;
-//        
-//        UIView *showView = nil;
-//        
-//        UIImage *currentImage = nil;
-//        
-//        if (currentMessageId != 0)
-//        {
-//            int messageId = currentMessageId;
-//            for (UITableViewCell *cell in [_tableView visibleCells])
-//            {
-//                if ([cell isKindOfClass:[TGPhotoGridCell class]])
-//                {
-//                    TGPhotoGridCell *gridCell = (TGPhotoGridCell *)cell;
-//                    for (NSNumber *nMessageId in gridCell.imageTags)
-//                    {
-//                        if ([nMessageId intValue] == messageId)
-//                        {
-//                            CGRect rect = [gridCell rectForImageWithTag:[NSNumber numberWithInt:messageId]];
-//                            if (!CGRectIsNull(rect))
-//                            {
-//                                targetRect = [self.view.window convertRect:rect fromView:gridCell];
-//                                showView = [gridCell viewForImageWithTag:[NSNumber numberWithInt:messageId]];
-//                                showView.hidden = true;
-//                                
-//                                currentImage = [[TGRemoteImageView sharedCache] cachedImage:((TGRemoteImageView *)showView).currentUrl availability:TGCacheBoth];
-//                                if (currentImage == nil)
-//                                    currentImage = ((TGRemoteImageView *)showView).currentImage;
-//                            }
-//                            
-//                            break;
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//        
-//        if (currentImage == nil)
-//            targetRect = CGRectZero;
-//        
-////        id<TGAppManager> appManager = TGAppDelegateInstance;
-//        
-//        [imageViewController animateDisappear:self.view anchorForImage:_tableView toRect:targetRect toImage:currentImage swipeVelocity:0.0f completion:^
-//        {
-////            [appManager dismissContentController];
-//            showView.hidden = false;
-//            UIView *alphaView = [showView viewWithTag:201];
-//            alphaView.alpha = 0.0f;
-//            [UIView animateWithDuration:0.3 animations:^
-//            {
-//                alphaView.alpha = 1.0f;
-//            }];
-//        }];
-//        
-////        [((TGNavigationController *)self.navigationController) updateControllerLayout:false];
-//    }
-//}
-
+- (void)actionStageActionRequested:(NSString *)action options:(NSDictionary *)options
+{
+    if ([action isEqualToString:@"openImage"])
+    {
+   
+        NSValue *nRect = [options objectForKey:@"rectInWindowCoords"];
+        NSNumber *nTag = [options objectForKey:@"tag"];
+        if (nTag == nil)
+            return;
+        
+        UIView *hideView = nil;
+        int messageId = [nTag intValue];
+        for (UITableViewCell *cell in [_tableView visibleCells])
+        {
+            if ([cell isKindOfClass:[TGPhotoGridCell class]])
+            {
+                TGPhotoGridCell *gridCell = (TGPhotoGridCell *)cell;
+                for (NSNumber *nMessageId in gridCell.imageTags)
+                {
+                    if ([nMessageId intValue] == messageId)
+                    {
+                        CGRect rect = [gridCell rectForImageWithTag:nTag];
+                        if (!CGRectIsNull(rect))
+                        {
+                            hideView = [gridCell viewForImageWithTag:nTag];
+                        }
+                        
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

@@ -9,13 +9,13 @@
 #import "NWImageCache.h"
 #import "TGMidia.h"
 #import "TGImageView.h"
+#import "TGPhotoGridController.h"
 
 #define TGStretchableImageInCenterWithName(s,t) { UIImage *rawImage = [UIImage imageNamed:s]; t = [rawImage stretchableImageWithLeftCapWidth:(int)((rawImage.size.width / 2)) topCapHeight:(int)((rawImage.size.height / 2))]; }
 
 @interface TGPhotoGridCell ()
 
-@property (nonatomic, strong) NSMutableArray *imageViews;
-@property (nonatomic, strong) NSMutableArray *imageShadows;
+
 
 
 @end
@@ -34,6 +34,12 @@
         self.imageAttachments = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+-(void)awakeFromNib
+{
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(imageViewTapped:)];
+//    [self.imageView addGestureRecognizer:tap];
 }
 
 - (void)collectCachedPhotos:(NSMutableDictionary *)dict
@@ -238,31 +244,35 @@
     NSInteger limit = MAX(self.numberOfImagePlaces, count);
     for (int i = 0; i < limit; i++)
     {
-        TGImageView *imageView = nil;
+//        TGImageView *imageView = nil;
+        self.imageViewTG = nil;
         UIView *shadowView = nil;
         if (i >= count)
         {
-            imageView = [[TGImageView alloc] initWithFrame:CGRectZero];
-            imageView.fadeTransition = true;
-            imageView.clipsToBounds = true;
-            imageView.contentMode = UIViewContentModeScaleAspectFill;
-            [self.contentView addSubview:imageView];
-            [self.imageViews addObject:imageView];
-            imageView.userInteractionEnabled = true;
-            [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapped:)]];
+            self.imageViewTG = [[TGImageView alloc] initWithFrame:CGRectZero];
+            self.imageViewTG.fadeTransition = true;
+            self.imageViewTG.clipsToBounds = true;
+            self.imageViewTG.contentMode = UIViewContentModeScaleAspectFill;
+            [self.contentView addSubview:self.imageViewTG];
+            [self.imageViews addObject:self.imageViewTG];
+            self.imageViewTG.userInteractionEnabled = true;
+            self.recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(imageViewTapped:)];
+                [self.imageViewTG addGestureRecognizer:self.recognizer];
+            
+//            [self.imageViewTG addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapped:)]];
             
             shadowView = [[UIImageView alloc] initWithImage:shadowImage];
-            [imageView addSubview:shadowView];
+            [self.imageViewTG addSubview:shadowView];
             
             count++;
         }
         else
-            imageView = [self.imageViews objectAtIndex:i];
+            self.imageViewTG = [self.imageViews objectAtIndex:i];
         
-        imageView.frame = CGRectMake(currentX, 4, imageSize.width, imageSize.height);
+        self.imageViewTG.frame = CGRectMake(currentX, 4, imageSize.width, imageSize.height);
         currentX += imageSize.width + widthSpacing;
         
-        [imageView loadImageUsingUrl:[self.imageUrls objectAtIndex:i]];
+        [self.imageViewTG loadImageUsingUrl:[self.imageUrls objectAtIndex:i]];
         
 //        if (i >= urlCount)
 //        {
@@ -331,37 +341,47 @@
     }
 }
 
-
-
-- (void)imageViewTapped:(UITapGestureRecognizer *)recognizer
-{
-    if (recognizer.state == UIGestureRecognizerStateRecognized)
-    {
-//        TGRemoteImageView *remoteImageView = (TGRemoteImageView *)recognizer.view;
-        TGImageView *imageView  = (TGImageView*) recognizer.view;
-        if (![imageView isKindOfClass:[TGImageView class]])
-            return;
-        
-        UIImage *currentImage = [imageView currentImage];
-        if (currentImage == nil)
-            return;
-        
-        int imageIndex = [self.imageViews indexOfObject:recognizer.view];
-        id tag = nil;
-        if (imageIndex >= 0 && imageIndex < (int)_imageTags.count)
-            tag = [_imageTags objectAtIndex:imageIndex];
-        
-        if (imageIndex >= 0 && imageIndex < (int)_imageUrls.count && tag != nil)
-        {
-            
-//            id<ASWatcher> watcher = _watcherHandle.delegate;
-//            if (watcher != nil && [watcher respondsToSelector:@selector(actionStageActionRequested:options:)])
-//            {
-//                [watcher actionStageActionRequested:@"openImage" options:[[NSDictionary alloc] initWithObjectsAndKeys:currentImage, @"image", [NSValue valueWithCGRect:[remoteImageView convertRect:remoteImageView.bounds toView:self.window]], @"rectInWindowCoords", tag, @"tag", nil]];
-//            }
-        }
+- (void)imageViewTapped:(TGPhotoGridCell *)sender{
+    if([self.delegate respondsToSelector:@selector(imageViewTapped:)]) {
+        [self.delegate imageViewTapped:self];
     }
 }
+
+
+//- (void)imageViewTapped:(UITapGestureRecognizer *)recognizer
+//{
+//    if (recognizer.state == UIGestureRecognizerStateRecognized)
+//    {
+////        TGRemoteImageView *remoteImageView = (TGRemoteImageView *)recognizer.view;
+//        TGImageView *imageView  = (TGImageView*) recognizer.view;
+//        if (![imageView isKindOfClass:[TGImageView class]])
+//            return;
+//        
+//        UIImage *currentImage = [imageView currentImage];
+//        if (currentImage == nil)
+//            return;
+//        
+//        int imageIndex = [self.imageViews indexOfObject:recognizer.view];
+//        id tag = nil;
+//        if (imageIndex >= 0 && imageIndex < (int)_imageTags.count)
+//            tag = [_imageTags objectAtIndex:imageIndex];
+//        
+//        if (imageIndex >= 0 && imageIndex < (int)_imageUrls.count && tag != nil)
+//        {
+//            
+//            
+////            id<ASWatcher> watcher = _watcherHandle.delegate;
+////            if (watcher != nil && [watcher respondsToSelector:@selector(actionStageActionRequested:options:)])
+////            {
+////                [watcher actionStageActionRequested:@"openImage" options:[[NSDictionary alloc] initWithObjectsAndKeys:currentImage, @"image", [NSValue valueWithCGRect:[remoteImageView convertRect:remoteImageView.bounds toView:self.window]], @"rectInWindowCoords", tag, @"tag", nil]];
+////            }
+//         
+//            
+//        }
+//    }
+//}
+//
+
 
 
 + (UIImage *)mediaGridImagePlaceholder

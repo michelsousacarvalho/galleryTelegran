@@ -8,13 +8,15 @@
 
 #import "TGViewController.h"
 #import "TGMidia.h"
+#import "TGActionTableView.h"
+#import "TGPhotoGridCell.h"
 
-@interface TGPhotoGridController : TGViewController <TGViewControllerNavigationBarAppearance>
+@interface TGPhotoGridController : TGViewController <TGViewControllerNavigationBarAppearance, TGPhotoGridCellDelegate>
 
 //@property (nonatomic, strong) ASHandle *actionHandle;
 @property (nonatomic, strong) NSMutableArray *midias;
 
+
 //- (id)initWithConversationId:(int64_t)conversationId isEncrypted:(bool)isEncrypted;
-
-
+- (void)actionStageActionRequested:(NSString *)action options:(NSDictionary *)options;
 @end
