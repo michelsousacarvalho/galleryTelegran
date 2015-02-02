@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C5D71761A7F10D700896242 /* ASHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5D71741A7F10D700896242 /* ASHandle.m */; };
 		6C87DF531A7A47E20058632A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C87DF521A7A47E20058632A /* main.m */; };
 		6C87DF561A7A47E20058632A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C87DF551A7A47E20058632A /* AppDelegate.m */; };
 		6C87DF591A7A47E20058632A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C87DF581A7A47E20058632A /* ViewController.m */; };
@@ -63,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C5D71731A7F10D700896242 /* ASHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASHandle.h; sourceTree = "<group>"; };
+		6C5D71741A7F10D700896242 /* ASHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHandle.m; sourceTree = "<group>"; };
+		6C5D71751A7F10D700896242 /* ASWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASWatcher.h; sourceTree = "<group>"; };
 		6C87DF4D1A7A47E20058632A /* GalleryTelegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryTelegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C87DF511A7A47E20058632A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C87DF521A7A47E20058632A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -308,6 +312,9 @@
 		6CC780231A7AC55200C54F74 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				6C5D71731A7F10D700896242 /* ASHandle.h */,
+				6C5D71741A7F10D700896242 /* ASHandle.m */,
+				6C5D71751A7F10D700896242 /* ASWatcher.h */,
 				6CC7805E1A7B2C7800C54F74 /* TGImageUtils.h */,
 				6CC7805F1A7B2C7800C54F74 /* TGImageUtils.mm */,
 				6CC780271A7AC5C000C54F74 /* NSData+GZip.h */,
@@ -458,6 +465,7 @@
 				6CC7801C1A7AC4B900C54F74 /* TGHacks.m in Sources */,
 				6CC780161A7AC46800C54F74 /* TGNavigationBar.m in Sources */,
 				6CC77AA81A7A4E6500C54F74 /* TGPhotoGridController.mm in Sources */,
+				6C5D71761A7F10D700896242 /* ASHandle.m in Sources */,
 				6CC7804E1A7B22AD00C54F74 /* TGImagePagingScrollView.mm in Sources */,
 				6CC780411A7AD70700C54F74 /* NWImageRequest.m in Sources */,
 				6CC7805D1A7B28D400C54F74 /* TGImageViewControllerInterfaceView.m in Sources */,

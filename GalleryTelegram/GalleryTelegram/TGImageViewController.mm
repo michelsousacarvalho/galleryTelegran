@@ -266,40 +266,40 @@
 
 - (void)animateAppear:(UIView *)containerForImage anchorForImage:(UIView *)anchorForImage fromRect:(CGRect)fromRect fromImage:(UIImage *)fromImage start:(dispatch_block_t)start
 {
-//    if (!self.isViewLoaded)
-//    {
-//        _appearFromView = containerForImage;
-//        _appearAboveView = anchorForImage;
-//        _appearFromRect = fromRect;
-//        _fromImage = fromImage;
-//        _appearStart = start;
-//        
-//        return;
-//    }
-//    
-//    [TGViewController disableUserInteractionFor:0.302];
-//    [TGViewController disableAutorotationFor:0.302];
-//    
-//    if (start)
-//        start();
-//    
-////    [_interfaceView setPageHandle:_initialPage.actionHandle];
-////    [_initialPage loadItem:_imageItem placeholder:_placeholder willAnimateAppear:true];
-////    [self.initialPage ]
-//    
+    if (!self.isViewLoaded)
+    {
+        _appearFromView = containerForImage;
+        _appearAboveView = anchorForImage;
+        _appearFromRect = fromRect;
+        _fromImage = fromImage;
+        _appearStart = start;
+        
+        return;
+    }
+    
+    [TGViewController disableUserInteractionFor:0.302];
+    [TGViewController disableAutorotationFor:0.302];
+    
+    if (start)
+        start();
+    
+    [_interfaceView setPageHandle:_initialPage.actionHandle];
+    [_initialPage loadItem:_imageItem placeholder:_placeholder willAnimateAppear:true];
+    [self.initialPage ]
+    
 //    [_interfaceView setPlayerControlsVisible:[_initialPage.imageItem type] == TGMediaItemTypeVideo paused:!_autoplay];
-//    
-//    [_initialPage animateAppearFromImage:fromImage fromView:containerForImage aboveView:anchorForImage fromRect:fromRect toInterfaceOrientation:self.interfaceOrientation completion:^
-//    {
-//        _backgroundView.alpha = 1.0f;
-//        _backgroundView.hidden = false;
-//        
-//        [self hasAnimatedAppear];
-//    } keepAspect:_keepAspect];
-//    
-//    [_interfaceView setActive:true duration:0.3];
-//    
-//    [_imageViewCompanion preloadCount];
+    
+    [_initialPage animateAppearFromImage:fromImage fromView:containerForImage aboveView:anchorForImage fromRect:fromRect toInterfaceOrientation:self.interfaceOrientation completion:^
+    {
+        _backgroundView.alpha = 1.0f;
+        _backgroundView.hidden = false;
+        
+        [self hasAnimatedAppear];
+    } keepAspect:_keepAspect];
+    
+    [_interfaceView setActive:true duration:0.3];
+    
+    [_imageViewCompanion preloadCount];
 }
 
 - (void)hasAnimatedAppear

@@ -59,9 +59,10 @@
             if (i < (int)_imageViews.count)
             {
 //                TGRemoteImageView *imageView = [_imageViews objectAtIndex:i];
-//                return imageView.frame;
-                UIImageView *image  = [[UIImageView alloc] init];
-                return image.frame;
+                TGImageView *imageView = [_imageViews objectAtIndex:i];
+                return imageView.frame;
+//                UIImageView *image  = [[UIImageView alloc] init];
+//                return image.frame;
             }
             break;
         }
@@ -78,8 +79,8 @@
         {
             if (i < (int)_imageViews.count)
             {
-                UIImageView *imageView = [[UIImageView alloc] init];
-//                TGRemoteImageView *imageView = [_imageViews objectAtIndex:i];
+//                UIImageView *imageView = [[UIImageView alloc] init];
+                TGImageView *imageView = [_imageViews objectAtIndex:i];
                 return imageView;
             }
             break;

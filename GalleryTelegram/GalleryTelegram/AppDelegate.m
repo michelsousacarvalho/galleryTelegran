@@ -14,6 +14,20 @@
 
 @implementation AppDelegate
 
+- (void)presentContentController:(UIViewController *)controller
+{
+    self.contentWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.contentWindow.windowLevel = UIWindowLevelStatusBar - 0.1f;
+    
+    self.contentWindow.rootViewController = controller;
+    
+    dispatch_async(dispatch_get_main_queue(), ^
+                   {
+//                       [self dismissNotification];
+                       
+                       [self.contentWindow makeKeyAndVisible];
+                   });
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
