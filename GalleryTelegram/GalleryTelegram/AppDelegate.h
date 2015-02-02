@@ -11,7 +11,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) UIWindow *contentWindow;
+//@property (strong, nonatomic) UIWindow *contentWindow;
 
 - (void)presentContentController:(UIViewController *)controller;
 @end

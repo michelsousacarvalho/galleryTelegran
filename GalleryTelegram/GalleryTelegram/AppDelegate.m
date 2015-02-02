@@ -16,17 +16,17 @@
 
 - (void)presentContentController:(UIViewController *)controller
 {
-    self.contentWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.contentWindow.windowLevel = UIWindowLevelStatusBar - 0.1f;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.windowLevel = UIWindowLevelStatusBar - 0.1f;
     
-    self.contentWindow.rootViewController = controller;
+    self.window.rootViewController = controller;
     
-    dispatch_async(dispatch_get_main_queue(), ^
-                   {
+//    dispatch_async(dispatch_get_main_queue(), ^
+//                   {
 //                       [self dismissNotification];
                        
-                       [self.contentWindow makeKeyAndVisible];
-                   });
+                       [self.window makeKeyAndVisible];
+//                   });
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

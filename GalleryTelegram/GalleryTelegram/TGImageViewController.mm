@@ -89,10 +89,11 @@
 //    return self;
 //}
 
--(id) initWithImage:(UIImage*) image{
+-(id) initWithImage:(UIImage*) image placeholder:(UIImage *) placeholder{
     self = [super initWithNibName:nil bundle:nil];
     if(self){
         self.imageItem = image;
+        self.placeholder = placeholder;
     }
     return self;
 }
@@ -283,9 +284,9 @@
     if (start)
         start();
     
-    [_interfaceView setPageHandle:_initialPage.actionHandle];
-    [_initialPage loadItem:_imageItem placeholder:_placeholder willAnimateAppear:true];
-    [self.initialPage ]
+//    [_interfaceView setPageHandle:_initialPage.actionHandle];
+//    [self.initialPage loadItem:self.imageItem placeholder:self.placeholder willAnimateAppear:true];
+//    [self.initialPage ]
     
 //    [_interfaceView setPlayerControlsVisible:[_initialPage.imageItem type] == TGMediaItemTypeVideo paused:!_autoplay];
     

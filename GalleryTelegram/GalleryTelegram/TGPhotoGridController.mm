@@ -1004,7 +1004,7 @@
         {
             CGRect windowSpaceFrame = [nRect CGRectValue];
 //            TGImageViewController *imageViewController = [[TGImageViewController alloc] initWithImageItem:imageItem placeholder:image];
-        TGImageViewController *imageViewController = [[TGImageViewController alloc] initWithImage: imagePhoto];
+        TGImageViewController *imageViewController = [[TGImageViewController alloc] initWithImage: imagePhoto placeholder:imagePhoto];
 //            imageViewController.saveToGallery = _conversationId > INT_MIN && TGAppDelegateInstance.autosavePhotos;
 //            imageViewController.ignoreSaveToGalleryUid = TGTelegraphInstance.clientUserId;
             imageViewController.groupIdForDownloadingItems = _conversationId;
@@ -1025,6 +1025,8 @@
 //            [TGAppDelegateInstance presentContentController:imageViewController];
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             [appDelegate presentContentController:imageViewController];
+            
+//            UIViewController *rootViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
             
         }
     }

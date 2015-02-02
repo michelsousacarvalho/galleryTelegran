@@ -39,7 +39,7 @@
 @property (nonatomic) bool autoplay;
 
 //- (id)initWithImageItem:(id<TGMediaItem>)imageItem placeholder:(UIImage *)placeholder;
--(id) initWithImage:(UIImage*) image;
+-(id) initWithImage:(UIImage*) image placeholder:(UIImage *) placeholder;
 
 - (void)animateAppear:(UIView *)containerForImage anchorForImage:(UIView *)anchorForImage fromRect:(CGRect)fromRect fromImage:(UIImage *)fromImage start:(dispatch_block_t)start;
 - (void)animateDisappear:(UIView *)containerForImage anchorForImage:(UIView *)anchor toRect:(CGRect)rectInWindowSpace toImage:(UIImage *)toImage swipeVelocity:(float)swipeVelocity completion:(dispatch_block_t)completion;
